@@ -16,7 +16,7 @@ class MainController {
       })
       res.status(200).json(data)
     } catch (error) {
-      console.log(error);
+      res.status(500).json({message: 'Internal server error'})
     }
   }
 
@@ -58,7 +58,7 @@ class MainController {
       await Product.create(formData)
       res.status(201).json({message: "product created"})
     } catch (error) {
-      console.log(error);
+      res.status(500).json({message: 'Internal server error'})
     }
   }
 
@@ -91,7 +91,7 @@ class MainController {
       })
       res.status(200).json({message: "product updated"})
     } catch (error) {
-      console.log(error)
+      res.status(500).json({message: 'Internal server error'})
     }
   }
 
@@ -113,7 +113,7 @@ class MainController {
       })
       res.status(200).json(data)
     } catch (error) {
-      console.log(error)
+      res.status(500).json({message: 'Internal server error'})
     }
   }
 }
