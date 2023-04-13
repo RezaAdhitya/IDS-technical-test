@@ -12,6 +12,24 @@
 - React router dom
 - AG Grid
 - Vanilla CSS
+## Setup Guide
+```
+SERVER SETUP
+============
+- clone repo
+- cd IDS-technical-test/server
+- npm install
+- npx sequelize db:migrate (postgreSQL required in your machine)
+- npx sequelize db:seed:all (postgreSQL required in your machine)
+- npx nodemon app.js
+
+CLIENT SETUP
+============
+- cd IDS-technical-test/client
+- npm install
+- npm run start
+
+```
 ## API Endpoints
 ```
 Endpoint Summary
