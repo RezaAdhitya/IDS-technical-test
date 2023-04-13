@@ -49,7 +49,6 @@ function EditProductPage() {
     fetch('http://localhost:3000/' + id)
     .then(result => result.json())
     .then(data => {
-      console.log(data);
       let adjustedData = {
         ...data,
         transactionDate: new Date(data.transactionDate).toISOString().split('T')[0],

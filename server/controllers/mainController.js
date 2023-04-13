@@ -54,7 +54,6 @@ class MainController {
     */
     try {
       let {formData} = req.body
-      console.log(req);
       await Product.create(formData)
       res.status(201).json({message: "product created"})
     } catch (error) {
@@ -83,7 +82,6 @@ class MainController {
     try {
       let id = req.params.id
       let {formData} = req.body
-      console.log(formData);
       await Product.update(formData, {
         where: {
           id
